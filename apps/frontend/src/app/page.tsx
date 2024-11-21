@@ -1,8 +1,7 @@
-import Pagina from "@/components/template/pagina";
-
+import Pagina from "@/components/template/Pagina";
 export default function Home() {
   return (
-    <div>
+    <div className="w-full">
       <Pagina>
         <div>Inicio</div>
       </Pagina>
