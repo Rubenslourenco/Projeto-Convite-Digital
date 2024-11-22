@@ -37,7 +37,7 @@ body {
   .botao.vermelho {
     @apply bg-red-500 text-white;
   }
-  .botao.gren {
+  .botao.verde {
     @apply bg-green-500 text-white;
   }
 }
