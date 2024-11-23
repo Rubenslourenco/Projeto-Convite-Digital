@@ -4,7 +4,7 @@ import { Id } from "../shared";
 const eventos: Evento[] = [
   {
     id: "1",
-    alias: "evento-fullstack",
+    alias: "Evento-Fullstack:",
     senha: "senha123",
     nome: "Evento de Desenvolvimento Fullstack",
     data: new Date("2024-12-01T10:00:00Z"),
