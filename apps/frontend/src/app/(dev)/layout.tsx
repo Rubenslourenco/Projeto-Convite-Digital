@@ -1,11 +1,5 @@
-import Pagina from "../../components/template/Pagina";
+import Pagina from "@/components/template/Pagina";
 
-import { ReactNode } from "react";
-
-interface LayoutProps {
-  children: ReactNode;
-}
-
-export default function Layout(props: LayoutProps) {
+export default function Layout(props: any) {
   return <Pagina>{props.children}</Pagina>;
 }
