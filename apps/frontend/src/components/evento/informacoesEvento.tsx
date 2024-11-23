@@ -1,4 +1,4 @@
-import { Evento } from "@/core";
+import { Evento } from "../../../../../packages/core/src";
 import Informacao from "../shared/Informacao";
 
 export interface InformacoesEventoProps {

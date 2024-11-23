@@ -1,8 +1,8 @@
-import { Evento } from "@/core";
+import { Evento } from "../../../../../packages/core/src";
 import InformacoesEventoProps from "@/components/evento/informacoesEvento";
 import AcessarVuaQrCode from "@/components/evento/AcessarviaQrCode";
 import Estatistica from "@/components/shared/Estatistica";
-import { Convidado } from "@/core";
+import { Convidado } from "../../../../../packages/core/src";
 import ListaConvidados from "@/components/evento/ListaConvidados";
 
 export interface DashboardEventoProps {
