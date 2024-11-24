@@ -1,11 +1,11 @@
-import { Convidado } from "../../../../../packages/core/src";
-import { ConvidadoItem } from "./ConvidadoItem";
+import { Convidado } from "core";
+import ConvidadoItem from "./ConvidadoItem";
 
-export interface ListaConvidadoProps {
+export interface ListaConvidadosProps {
   convidados: Convidado[];
 }
 
-export default function ListaConvidados(props: ListaConvidadoProps) {
+export default function ListaConvidados(props: ListaConvidadosProps) {
   return (
     <div>
       <ul className="flex flex-col gap-2">

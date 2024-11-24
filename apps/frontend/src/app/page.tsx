@@ -6,7 +6,7 @@ export default function Home() {
     <div
       className="
         h-screen flex flex-col justify-center items-center gap-10
-        bg-[url('/background-elementos.svg')] bg-cover
+        bg-[url('/background-inicio.svg')] bg-cover
       "
     >
       <div className="flex flex-col items-center gap-4">

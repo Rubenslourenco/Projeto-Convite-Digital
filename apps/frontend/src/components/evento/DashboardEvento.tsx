@@ -1,9 +1,8 @@
-import { Evento } from "../../../../../packages/core/src";
-import InformacoesEventoProps from "@/components/evento/informacoesEvento";
-import AcessarVuaQrCode from "@/components/evento/AcessarviaQrCode";
-import Estatistica from "@/components/shared/Estatistica";
-import { Convidado } from "../../../../../packages/core/src";
-import ListaConvidados from "@/components/evento/ListaConvidados";
+import { Convidado, Evento } from "core";
+import InformacoesEvento from "./InformacoesEvento";
+import AcessarViaQrCode from "./AcessarViaQrCode";
+import Estatistica from "../shared/Estatistica";
+import ListaConvidados from "./ListaConvidados";
 
 export interface DashboardEventoProps {
   evento: Evento;
@@ -16,24 +15,24 @@ export default function DashboardEvento(props: DashboardEventoProps) {
   return (
     <div className="flex flex-col gap-2">
       <div className="flex gap-2 self-stretch">
-        <InformacoesEventoProps evento={props.evento} className="flex-1" />
-        <AcessarVuaQrCode evento={props.evento} />
+        <InformacoesEvento evento={props.evento} className="flex-1" />
+        <AcessarViaQrCode evento={props.evento} />
       </div>
       <div className="grid grid-cols-3 gap-6 mt-4">
         <Estatistica
           texto="Expectativa de Convidados:"
           valor={props.evento.publicoEsperado}
-          imagem="/icones/acompanhantes.svg"
+          imagem="/icones/convidados.svg"
         />
         <Estatistica
           texto="Confirmações:"
           valor={props.presentes.length}
-          imagem="/icones/convidados.svg"
+          imagem="/icones/confirmados.svg"
         />
         <Estatistica
-          texto="Total Confirmados:"
+          texto="Total Confirmado:"
           valor={props.totalGeral}
-          imagem="/icones/confirmados.svg"
+          imagem="/icones/acompanhantes.svg"
         />
       </div>
 
@@ -41,12 +40,13 @@ export default function DashboardEvento(props: DashboardEventoProps) {
         <span>Atualizar Lista de Convidados</span>
       </button>
 
-      <span className="flex py-2 text-1 font-bold text-white/80">
-        Convidados que confirmaram PRESENÇA
+      <span className="flex py-2 text-xl font-bold text-white/80">
+        Convidados que confimaram PRESENÇA
       </span>
       <ListaConvidados convidados={props.presentes} />
-      <span className="flex py-2 text-1 font-bold text-white/80">
-        Convidados que confimaram AUSENCIA
+
+      <span className="flex py-2 text-xl font-bold text-white/80">
+        Convidados que confirmaram AUSÊNCIA
       </span>
       <ListaConvidados convidados={props.ausentes} />
     </div>

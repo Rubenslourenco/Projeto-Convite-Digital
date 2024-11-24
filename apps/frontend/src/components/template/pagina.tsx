@@ -11,14 +11,14 @@ export default function Pagina(props: PaginaProps) {
       className="
         flex flex-col items-center py-10 min-h-screen
         bg-[url('/background.png')] bg-cover
-    "
+      "
     >
       <Logo />
       <main
         className={`
-           flex-1 flex flex-col justify-center py-10
-           container ${props.className}
-      `}
+            flex-1 flex flex-col justify-center py-10
+            container ${props.className}
+        `}
       >
         {props.children}
       </main>
